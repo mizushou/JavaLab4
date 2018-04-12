@@ -1,6 +1,6 @@
 package ca.ciccc.java.model;
 
-public class GasStationAttendant extends Employee {
+public class GasStationAttendant extends Employee implements Comparable<GasStationAttendant> {
 	
 	double numberOfDollarsStolenPerDay;
 	
@@ -18,7 +18,7 @@ public class GasStationAttendant extends Employee {
 	
 	@Override
 	public DressCode getDressCode() {
-		return null;
+		return DressCode.UNIFORM;
 	}
 	
 	@Override
@@ -39,6 +39,16 @@ public class GasStationAttendant extends Employee {
 	@Override
 	public double getOverTimePayRate() {
 		return OVERTIME_PAY_RATE;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		return super.equals(obj);
+	}
+	
+	@Override
+	public int compareTo(GasStationAttendant o) {
+		return (int)(this.numberOfDollarsStolenPerDay - o.numberOfDollarsStolenPerDay);
 	}
 
 }

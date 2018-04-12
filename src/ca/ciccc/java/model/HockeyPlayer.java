@@ -1,6 +1,6 @@
 package ca.ciccc.java.model;
 
-public class HockeyPlayer extends Employee {
+public class HockeyPlayer extends Employee implements Comparable<HockeyPlayer> {
 
 	int numberOfGoals;
 
@@ -17,7 +17,7 @@ public class HockeyPlayer extends Employee {
 
 	@Override
 	public DressCode getDressCode() {
-		return null;
+		return DressCode.JERSEY;
 	}
 
 	@Override
@@ -38,6 +38,16 @@ public class HockeyPlayer extends Employee {
 	@Override
 	public double getOverTimePayRate() {
 		return OVERTIME_PAY_RATE;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		return super.equals(obj);
+	}
+	
+	@Override
+	public int compareTo(HockeyPlayer o) {
+		return this.numberOfGoals - o.numberOfGoals;
 	}
 
 }

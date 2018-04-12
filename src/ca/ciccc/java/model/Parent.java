@@ -1,6 +1,6 @@
 package ca.ciccc.java.model;
 
-public class Parent extends Employee {
+public class Parent extends Employee implements Comparable<Parent> {
 	
 	int numberOfHoursSpentPerWeekWithKids;
 	
@@ -17,7 +17,7 @@ public class Parent extends Employee {
 	
 	@Override
 	public DressCode getDressCode() {
-		return null;
+		return DressCode.ANYTHING;
 	}
 
 	@Override
@@ -39,5 +39,14 @@ public class Parent extends Employee {
 	public double getOverTimePayRate() {
 		return OVERTIME_PAY_RATE;
 	}
-
+	
+	@Override
+	public boolean equals(Object obj) {
+		return super.equals(obj);
+	}
+	
+	@Override
+	public int compareTo(Parent o) {
+		return this.numberOfHoursSpentPerWeekWithKids - o.numberOfHoursSpentPerWeekWithKids;
+	}
 }
