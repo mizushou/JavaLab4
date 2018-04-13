@@ -10,10 +10,10 @@ public class Employees {
 	private ArrayList<GasStationAttendant> gsaArry;
 	
 	public Employees() {
-		ArrayList<HockeyPlayer> hpArry = new ArrayList<HockeyPlayer>();
-		ArrayList<Professor> pfArry = new ArrayList<Professor>();
-		ArrayList<Parent> pArry = new ArrayList<Parent>();
-		ArrayList<GasStationAttendant> gsaArry = new ArrayList<GasStationAttendant>();
+		hpArry = new ArrayList<HockeyPlayer>();
+		pfArry = new ArrayList<Professor>();
+		pArry = new ArrayList<Parent>();
+		gsaArry = new ArrayList<GasStationAttendant>();
 
 		// HockyePlayer
 		hpArry.add(new HockeyPlayer("Wayne Gretzky", 894));
@@ -43,7 +43,41 @@ public class Employees {
 		gsaArry.add(new GasStationAttendant("Mary Fairy", 101));
 		gsaArry.add(new GasStationAttendant("Bee See	", 1));		
 	}
-
+	
+	public void display(ArrayList<HockeyPlayer> hpArry, ArrayList<Professor> pfArry, ArrayList<Parent> pArry, ArrayList<GasStationAttendant> gsaArry) {
+		displayHockeyPlayer(hpArry);
+		System.out.println();
+		displayProfessor(pfArry);
+		System.out.println();
+		displayParent(pArry);
+		System.out.println();
+		displayGasStationAttendant(gsaArry);
+	}
+		
+	private void displayHockeyPlayer(ArrayList<HockeyPlayer> hpArry) {
+		for (HockeyPlayer hp : hpArry) {
+			System.out.println(hp.getClass() + " " + hp.getName() + " " + hp.getNumberOfGoals());
+		}
+	}
+	
+	private void displayProfessor(ArrayList<Professor> pfArry) {
+		for (Professor pf : pfArry) {
+			System.out.println(pf.getClass() + " " + pf.getName() + " " + pf.getTeachingMajor());
+		}
+	}
+	
+	private void displayParent(ArrayList<Parent> pArry) {
+		for (Parent p : pArry) {
+			System.out.println(p.getClass() + " " + p.getName() + " " + p.getNumberOfHoursSpentPerWeekWithKids());
+		}
+	}
+	
+	private void displayGasStationAttendant(ArrayList<GasStationAttendant> gsaArry) {
+		for (GasStationAttendant gsa : gsaArry) {
+			System.out.println(gsa.getClass() + " " + gsa.getName() + " " + gsa.getNumberOfDollarsStolenPerDay());
+		}
+	}
+	
 	public ArrayList<HockeyPlayer> getHpArry() {
 		return hpArry;
 	}
@@ -60,7 +94,7 @@ public class Employees {
 		this.pfArry = pfArry;
 	}
 
-	public ArrayList<Parent> getpArry() {
+	public ArrayList<Parent> getPArry() {
 		return pArry;
 	}
 

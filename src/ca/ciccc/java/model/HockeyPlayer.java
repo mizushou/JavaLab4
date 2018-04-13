@@ -2,7 +2,7 @@ package ca.ciccc.java.model;
 
 public class HockeyPlayer extends Employee implements Comparable<HockeyPlayer> {
 
-	int numberOfGoals;
+	private int numberOfGoals;
 
 	private final String VERB = "play";
 	private final double OVERTIME_PAY_RATE = 0.0;
@@ -42,7 +42,17 @@ public class HockeyPlayer extends Employee implements Comparable<HockeyPlayer> {
 
 	@Override
 	public boolean equals(Object obj) {
-		return super.equals(obj);
+		if(obj == null)
+			return false;
+		if(this == obj)
+			return true;
+		if(!(obj instanceof HockeyPlayer))
+			return false;
+		HockeyPlayer objHp = (HockeyPlayer) obj; 
+		if(this.getNumberOfGoals() == objHp.getNumberOfGoals()) {
+			return true;
+		}
+		return false;
 	}
 	
 	@Override
@@ -50,4 +60,13 @@ public class HockeyPlayer extends Employee implements Comparable<HockeyPlayer> {
 		return this.numberOfGoals - o.numberOfGoals;
 	}
 
+	public int getNumberOfGoals() {
+		return numberOfGoals;
+	}
+
+	public void setNumberOfGoals(int numberOfGoals) {
+		this.numberOfGoals = numberOfGoals;
+	}
+	
+	
 }

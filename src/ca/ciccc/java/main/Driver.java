@@ -1,5 +1,8 @@
 package ca.ciccc.java.main;
 
+import java.util.Collection;
+import java.util.Collections;
+
 import ca.ciccc.java.model.DressCode;
 import ca.ciccc.java.model.Employees;
 
@@ -9,10 +12,18 @@ public class Driver {
 		
 		Employees emps = new Employees();
 		
-		
-		
-		
-		
+		System.out.println("##### Before ######");
+		emps.display(emps.getHpArry(), emps.getPfArry(), emps.getPArry(), emps.getGsaArry());
+
+		Collections.sort(emps.getHpArry());
+		Collections.sort(emps.getPfArry());
+		Collections.sort(emps.getPArry());
+		Collections.sort(emps.getGsaArry());
+				
+		System.out.println();
+		System.out.println("##### After ######");
+		emps.display(emps.getHpArry(), emps.getPfArry(), emps.getPArry(), emps.getGsaArry());
+
 //		System.out.println(DressCode.ANYTHING);
 //		System.out.println(DressCode.ANYTHING.getDetail());
 //		System.out.println(DressCode.ANYTHING.ordinal());
