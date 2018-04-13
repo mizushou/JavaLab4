@@ -41,7 +41,7 @@ public class Employees {
 		gsaArry.add(new GasStationAttendant("Tony Baloney", 100));
 		gsaArry.add(new GasStationAttendant("Benjamin Franklin", 100));
 		gsaArry.add(new GasStationAttendant("Mary Fairy", 101));
-		gsaArry.add(new GasStationAttendant("Bee See	", 1));		
+		gsaArry.add(new GasStationAttendant("Bee See", 1));		
 	}
 	
 	public void display(ArrayList<HockeyPlayer> hpArry, ArrayList<Professor> pfArry, ArrayList<Parent> pArry, ArrayList<GasStationAttendant> gsaArry) {
@@ -56,25 +56,30 @@ public class Employees {
 		
 	private void displayHockeyPlayer(ArrayList<HockeyPlayer> hpArry) {
 		for (HockeyPlayer hp : hpArry) {
-			System.out.println(hp.getClass() + " " + hp.getName() + " " + hp.getNumberOfGoals());
+			String output = String.format("|%-20s|%-20s|%s %d %-20s%n", "HockeyPlayer", hp.getName(), "scored", hp.getNumberOfGoals(), "goals");
+			System.out.printf(output);
 		}
 	}
 	
 	private void displayProfessor(ArrayList<Professor> pfArry) {
 		for (Professor pf : pfArry) {
-			System.out.println(pf.getClass() + " " + pf.getName() + " " + pf.getTeachingMajor());
+			String output = String.format("|%-20s|%-20s|%s %s%n", "Professor", pf.getName(), "teaches", pf.getTeachingMajor());
+			System.out.printf(output);
 		}
 	}
 	
 	private void displayParent(ArrayList<Parent> pArry) {
 		for (Parent p : pArry) {
-			System.out.println(p.getClass() + " " + p.getName() + " " + p.getNumberOfHoursSpentPerWeekWithKids());
+			String output = String.format("|%-20s|%-20s|%s %s%n", "Parent", p.getName(), "teaches", p.getNumberOfHoursSpentPerWeekWithKids());
+			System.out.printf(output);
 		}
 	}
 	
 	private void displayGasStationAttendant(ArrayList<GasStationAttendant> gsaArry) {
 		for (GasStationAttendant gsa : gsaArry) {
-			System.out.println(gsa.getClass() + " " + gsa.getName() + " " + gsa.getNumberOfDollarsStolenPerDay());
+			String output = String.format("|%-20s|%-20s|%s %d %-20s%n", "GasStationAttendant", gsa.getName(), "steals", (int)gsa.getNumberOfDollarsStolenPerDay(), "dollars a day");
+			System.out.printf(output);
+
 		}
 	}
 	
