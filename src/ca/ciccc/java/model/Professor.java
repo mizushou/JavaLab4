@@ -40,8 +40,6 @@ public class Professor extends Employee implements Comparable<Professor> {
 		return OVERTIME_PAY_RATE;
 	}
 
-	
-
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -73,7 +71,7 @@ public class Professor extends Employee implements Comparable<Professor> {
 		if (this.teachingMajor.equals(o.teachingMajor)) {
 			return 0;
 		}
-		// one is CS vs another is Not CS 
+		// one is CS vs another is Not CS
 		if ((this.teachingMajor.equals("Computer Systems") && !o.teachingMajor.equals("Computer Systems"))) {
 			return 1;
 		}
@@ -92,7 +90,5 @@ public class Professor extends Employee implements Comparable<Professor> {
 	public void setTeachingMajor(String teachingMajor) {
 		this.teachingMajor = teachingMajor;
 	}
-	
-	
-	
+
 }

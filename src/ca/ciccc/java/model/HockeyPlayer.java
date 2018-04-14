@@ -42,19 +42,19 @@ public class HockeyPlayer extends Employee implements Comparable<HockeyPlayer> {
 
 	@Override
 	public boolean equals(Object obj) {
-		if(obj == null)
+		if (obj == null)
 			return false;
-		if(this == obj)
+		if (this == obj)
 			return true;
-		if(!(obj instanceof HockeyPlayer))
+		if (!(obj instanceof HockeyPlayer))
 			return false;
-		HockeyPlayer objHp = (HockeyPlayer) obj; 
-		if(this.getNumberOfGoals() == objHp.getNumberOfGoals()) {
+		HockeyPlayer objHp = (HockeyPlayer) obj;
+		if (this.getNumberOfGoals() == objHp.getNumberOfGoals()) {
 			return true;
 		}
 		return false;
 	}
-	
+
 	@Override
 	public int compareTo(HockeyPlayer o) {
 		return this.numberOfGoals - o.numberOfGoals;
@@ -67,6 +67,5 @@ public class HockeyPlayer extends Employee implements Comparable<HockeyPlayer> {
 	public void setNumberOfGoals(int numberOfGoals) {
 		this.numberOfGoals = numberOfGoals;
 	}
-	
-	
+
 }

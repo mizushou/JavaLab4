@@ -1,20 +1,20 @@
 package ca.ciccc.java.model;
 
 public class Parent extends Employee implements Comparable<Parent> {
-	
+
 	private int numberOfHoursSpentPerWeekWithKids;
-	
+
 	private final String VERB = "care";
 	private final double OVERTIME_PAY_RATE = -2.0;
-	
+
 	public Parent() {
 	}
-	
+
 	public Parent(String name, int numberOfHoursSpentPerWeekWithKids) {
 		super(name);
 		this.numberOfHoursSpentPerWeekWithKids = numberOfHoursSpentPerWeekWithKids;
 	}
-	
+
 	@Override
 	public DressCode getDressCode() {
 		return DressCode.ANYTHING;
@@ -39,7 +39,7 @@ public class Parent extends Employee implements Comparable<Parent> {
 	public double getOverTimePayRate() {
 		return OVERTIME_PAY_RATE;
 	}
-		
+
 	@Override
 	public int compareTo(Parent o) {
 		return this.numberOfHoursSpentPerWeekWithKids - o.numberOfHoursSpentPerWeekWithKids;
@@ -74,8 +74,5 @@ public class Parent extends Employee implements Comparable<Parent> {
 			return false;
 		return true;
 	}
-	
-	
-	
-	
+
 }
