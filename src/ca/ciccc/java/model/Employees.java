@@ -24,9 +24,9 @@ public class Employees {
 
 		// Professor
 		pfArry.add(new Professor("Albert Einstein", "Physics"));
-		pfArry.add(new Professor("Alan Turing", "Computer Systems"));
+		pfArry.add(new Professor("Alan Turing", "Computer Science"));
 		pfArry.add(new Professor("Richard Feynman", "Physics"));
-		pfArry.add(new Professor("Tim Berners-Lee", "Computer Systems"));
+		pfArry.add(new Professor("Tim Berners-Lee", "Computer Science"));
 		pfArry.add(new Professor("Kurt Godel", "Logic"));
 
 		// Parent
