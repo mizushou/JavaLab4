@@ -58,7 +58,7 @@ public class HockeyPlayer extends Employee implements Comparable<HockeyPlayer> {
 	}
 
 	/**
-	 * 
+	 * Getter of SecondaryEducationRequired.
 	 */
 	@Override
 	public boolean postSecondaryEducationRequired() {
@@ -81,6 +81,16 @@ public class HockeyPlayer extends Employee implements Comparable<HockeyPlayer> {
 	@Override
 	public double getOverTimePayRate() {
 		return OVERTIME_PAY_RATE;
+	}
+
+	/**
+	 * Create hash code.
+	 */
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * numberOfGoals;
+		return result;
 	}
 
 	/**
@@ -126,6 +136,11 @@ public class HockeyPlayer extends Employee implements Comparable<HockeyPlayer> {
 	 */
 	public void setNumberOfGoals(int numberOfGoals) {
 		this.numberOfGoals = numberOfGoals;
+	}
+
+	@Override
+	public String toString() {
+		return "HockeyPlayer Class [name] : " + getName() + ", [goals] : " + getNumberOfGoals();
 	}
 
 }

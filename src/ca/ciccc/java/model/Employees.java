@@ -2,6 +2,15 @@ package ca.ciccc.java.model;
 
 import java.util.ArrayList;
 
+/**
+ * This class contain each Employee's ArrayList. These are [Hockey Player],
+ * [Professor], [Parent], [Gas station attendant]
+ * 
+ * @since 2018-04-13
+ * @author mizushou
+ *
+ */
+
 public class Employees {
 
 	private ArrayList<HockeyPlayer> hpArry;
@@ -9,6 +18,9 @@ public class Employees {
 	private ArrayList<Parent> pArry;
 	private ArrayList<GasStationAttendant> gsaArry;
 
+	/**
+	 * Default constructor.
+	 */
 	public Employees() {
 		hpArry = new ArrayList<HockeyPlayer>();
 		pfArry = new ArrayList<Professor>();
@@ -44,6 +56,18 @@ public class Employees {
 		gsaArry.add(new GasStationAttendant("Bee See", 1));
 	}
 
+	/**
+	 * Display all information on Employee held by this class.
+	 * 
+	 * @param hpArry
+	 *            ArrayList of Hockey Player.
+	 * @param pfArry
+	 *            ArrayList of Professor.
+	 * @param pArry
+	 *            ArrayList of Parent.
+	 * @param gsaArry
+	 *            ArrayList of Gas Station .
+	 */
 	public void display(ArrayList<HockeyPlayer> hpArry, ArrayList<Professor> pfArry, ArrayList<Parent> pArry,
 			ArrayList<GasStationAttendant> gsaArry) {
 		displayHockeyPlayer(hpArry);
@@ -88,34 +112,78 @@ public class Employees {
 		}
 	}
 
+	/**
+	 * Getter of HpArry
+	 * 
+	 * @return HpArry
+	 */
 	public ArrayList<HockeyPlayer> getHpArry() {
 		return hpArry;
 	}
 
+	/**
+	 * Setter of HpArry
+	 * 
+	 * @param hpArry
+	 *            ArrayList of HockyePlayer
+	 */
 	public void setHpArry(ArrayList<HockeyPlayer> hpArry) {
 		this.hpArry = hpArry;
 	}
 
+	/**
+	 * Getter of HpArry
+	 * 
+	 * @return HpArry
+	 */
 	public ArrayList<Professor> getPfArry() {
 		return pfArry;
 	}
 
+	/**
+	 * Setter of PfArry
+	 * 
+	 * @param pfArry
+	 *            ArrayList of Professor
+	 */
 	public void setPfArry(ArrayList<Professor> pfArry) {
 		this.pfArry = pfArry;
 	}
 
+	/**
+	 * Getter of PArry
+	 * 
+	 * @return PArry
+	 */
 	public ArrayList<Parent> getPArry() {
 		return pArry;
 	}
 
+	/**
+	 * Setter of PArry
+	 * 
+	 * @param pArry
+	 *            ArrayList of Parent
+	 */
 	public void setpArry(ArrayList<Parent> pArry) {
 		this.pArry = pArry;
 	}
 
+	/**
+	 * Getter of GsaArry
+	 * 
+	 * @return GsaArry
+	 */
 	public ArrayList<GasStationAttendant> getGsaArry() {
 		return gsaArry;
 	}
 
+	/**
+	 * Setter of GsaArry
+	 * 
+	 * @param gsaArry
+	 *            ArrayList of GasStationAttendant.
+	 */
 	public void setGsaArry(ArrayList<GasStationAttendant> gsaArry) {
 		this.gsaArry = gsaArry;
 	}

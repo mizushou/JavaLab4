@@ -58,7 +58,9 @@ public class Professor extends Employee implements Comparable<Professor> {
 	}
 
 	/**
+	 * Getter of SecondaryEducationRequired.
 	 * 
+	 * @return requirement of Secondary Education
 	 */
 	@Override
 	public boolean postSecondaryEducationRequired() {
@@ -84,7 +86,7 @@ public class Professor extends Employee implements Comparable<Professor> {
 	}
 
 	/**
-	 * Create hashcode.
+	 * Create hash code.
 	 */
 	@Override
 	public int hashCode() {
@@ -153,6 +155,11 @@ public class Professor extends Employee implements Comparable<Professor> {
 	 */
 	public void setTeachingMajor(String teachingMajor) {
 		this.teachingMajor = teachingMajor;
+	}
+
+	@Override
+	public String toString() {
+		return "Professor Class [name] : " + getName() + ", [Teaching major] : " + getTeachingMajor();
 	}
 
 }

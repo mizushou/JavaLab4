@@ -57,7 +57,9 @@ public class Parent extends Employee implements Comparable<Parent> {
 	}
 
 	/**
+	 * Getter of SecondaryEducationRequired.
 	 * 
+	 * @return requirement of Secondary Education
 	 */
 	@Override
 	public boolean postSecondaryEducationRequired() {
@@ -92,6 +94,7 @@ public class Parent extends Employee implements Comparable<Parent> {
 
 	/**
 	 * Getter of numberOfHoursSpentPerWeekWithKids.
+	 * 
 	 * @return numberOfHoursSpentPerWeekWithKids
 	 */
 	public int getNumberOfHoursSpentPerWeekWithKids() {
@@ -100,14 +103,16 @@ public class Parent extends Employee implements Comparable<Parent> {
 
 	/**
 	 * Setter of numberOfHoursSpentPerWeekWithKids.
+	 * 
 	 * @param numberOfHoursSpentPerWeekWithKids
+	 *            number of hours spent per week with kids
 	 */
 	public void setNumberOfHoursSpentPerWeekWithKids(int numberOfHoursSpentPerWeekWithKids) {
 		this.numberOfHoursSpentPerWeekWithKids = numberOfHoursSpentPerWeekWithKids;
 	}
 
 	/**
-	 * 
+	 * Create hash code.
 	 */
 	@Override
 	public int hashCode() {
@@ -132,6 +137,11 @@ public class Parent extends Employee implements Comparable<Parent> {
 		if (numberOfHoursSpentPerWeekWithKids != other.numberOfHoursSpentPerWeekWithKids)
 			return false;
 		return true;
+	}
+
+	@Override
+	public String toString() {
+		return "Parent Class [name] : " + getName() + ", [hour with kids] : " + getNumberOfHoursSpentPerWeekWithKids();
 	}
 
 }
